@@ -1,0 +1,44 @@
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.product-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+.nav-link {
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #FDB927 !important; 
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 40px; 
+        height: 40px;
+    }
+    
+    .card-title {
+        font-size: 0.9rem; 
+    }
+}
+
+
+.product-card:hover .btn {
+    background-color: #552583 !important; 
+    transition: 0.3s;
+}

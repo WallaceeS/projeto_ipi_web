@@ -1,0 +1,53 @@
+<div class="login-background"> 
+    <div class="container">
+        
+        <div class="row shadow p-4 p-md-5 bg-white rounded mx-auto" style="border-top: 5px solid #FDB927; border-bottom: 5px solid #552583; max-width: 500px;">
+            
+            <div class="col-12 mb-3 text-start order-first">
+                <a routerLink="/vitrine" style="cursor: pointer;" title="Voltar à Vitrine">
+                    <img src="/bola-icone.png" alt="Início" width="50" height="50">
+                </a>
+            </div>
+
+            <div class="col-12 text-center">
+                <h3 class="mb-4" style="font-weight: bold; color: #552583;">Recuperar Senha</h3>
+                
+                <p class="text-muted mb-4">
+                    Informe o seu e-mail cadastrado para recuperar o acesso à sua conta:
+                </p>
+
+                <div class="text-start">
+                    <label class="form-label" style="color: #552583; font-weight: bold;">E-mail</label>
+                    <input type="email" 
+                           name="email"
+                           [(ngModel)]="emailRecuperacao" 
+                           class="form-control mb-4" 
+                           placeholder="Digite seu e-mail cadastrado" 
+                           style="border-color: #FDB927;">
+                </div>
+                
+                <button (click)="recuperarSenha()" 
+                        class="btn w-100 mb-3" 
+                        style="background-color: #552583; color: #FDB927; font-weight: bold; font-size: 1.1rem;">
+                    Recuperar Senha
+                </button>
+
+                <p (click)="voltarAoLogin()" 
+                   style="cursor: pointer; color: #552583; text-decoration: underline; font-weight: 500; margin-top: 10px;">
+                    Voltar para o login
+                </p>
+
+                @if (mensagemRecuperacao != "") {
+                    <div class="alert mt-3" 
+                         [class.alert-success]="sucesso" 
+                         [class.alert-danger]="!sucesso" 
+                         role="alert"
+                         style="text-align: center; font-weight: bold;">
+                        {{ mensagemRecuperacao }}
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

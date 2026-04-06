@@ -1,0 +1,43 @@
+
+:host {
+    display: block;
+    background-color: #f4f4f4; 
+    min-height: 100vh;
+}
+
+ 
+.sticky-top {
+    z-index: 10;
+}
+
+
+.img-fluid {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+
+.border.rounded span:hover {
+    background-color: #eeeeee;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+
+.text-danger {
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+.text-danger:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-brand span {
+        display: none;  
+    }
+}

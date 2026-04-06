@@ -1,0 +1,52 @@
+
+.login-background {
+    background-color: #f4f4f4;
+ 
+    background-image: radial-gradient(#FDB927 0.5px, transparent 0.5px), 
+                      radial-gradient(#552583 0.5px, #f4f4f4 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    
+ 
+    min-height: 100vh;
+    width: 100%;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+
+.row.shadow {
+    transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 767px) {
+    .login-background {
+        padding: 1rem; 
+        align-items: flex-start; 
+        padding-top: 2rem;
+    }
+
+    .row.shadow {
+        padding: 2rem !important; 
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    h3 {
+        font-size: 1.5rem; 
+    }
+
+    .btn {
+        padding: 12px; 
+    }
+}
+
+
+.btn:active {
+    transform: scale(0.98);
+}

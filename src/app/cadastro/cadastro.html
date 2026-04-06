@@ -1,0 +1,75 @@
+<div class="login-background"> 
+    <div class="container my-5">
+        
+        <div class="row shadow p-4 p-md-5 bg-white rounded mx-auto" style="border-top: 5px solid #FDB927; border-bottom: 5px solid #552583; max-width: 800px;">
+            
+            <div class="col-12 mb-3 text-start order-first">
+                <a routerLink="/vitrine" style="cursor: pointer;" title="Voltar à Vitrine">
+                    <img src="/bola-icone.png" alt="Início" width="50" height="50">
+                </a>
+            </div>
+
+            <div class="col-12 text-center mb-4">
+                <h3 style="font-weight: bold; color: #552583;">Criar Conta</h3>
+                <p class="text-muted">Preencha seus dados para se juntar ao nosso time!</p>
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label class="form-label" style="color: #552583; font-weight: bold;">Nome Completo</label>
+                <input type="text" [(ngModel)]="obj.nome" class="form-control" placeholder="Digite seu nome completo" style="border-color: #FDB927;">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label" style="color: #552583; font-weight: bold;">Data de Nascimento</label>
+                <input type="date" [(ngModel)]="obj.dataNascimento" class="form-control" style="border-color: #FDB927;">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label" style="color: #552583; font-weight: bold;">Documento (CPF ou RG)</label>
+                <input type="text" [(ngModel)]="obj.documento" class="form-control" placeholder="Digite seu documento" style="border-color: #FDB927;">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label" style="color: #552583; font-weight: bold;">Telefone</label>
+                <input type="text" [(ngModel)]="obj.telefone" class="form-control" placeholder="Ex: (11) 90000-0000" style="border-color: #FDB927;">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label" style="color: #552583; font-weight: bold;">E-mail</label>
+                <input type="email" [(ngModel)]="obj.email" class="form-control" placeholder="Digite seu e-mail" style="border-color: #FDB927;">
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label class="form-label" style="color: #552583; font-weight: bold;">Endereço Completo</label>
+                <input type="text" [(ngModel)]="obj.logradouro" class="form-control" placeholder="Rua, número, complemento, bairro" style="border-color: #FDB927;">
+            </div>
+
+            <div class="col-md-12 mb-4">
+                <label class="form-label" style="color: #552583; font-weight: bold;">Senha</label>
+                <input type="password" [(ngModel)]="obj.senha" class="form-control" placeholder="Crie uma senha forte" style="border-color: #FDB927;">
+            </div>
+
+            @if (alerta != "") {
+                <div class="col-12 mb-3">
+                    <div class="alert alert-danger text-center" role="alert" style="font-weight: bold;">
+                        {{ alerta }}
+                    </div>
+                </div>
+            }
+
+            <div class="col-12 mt-2">
+                <button (click)="cadastrar()" class="btn w-100" style="background-color: #FDB927; color: #552583; border: 2px solid #552583; font-weight: bold; font-size: 1.2rem; padding: 10px;">
+                    Finalizar Cadastro
+                </button>
+            </div>
+            
+            <div class="col-12 text-center mt-4">
+                <p class="mb-0" style="color: #333;">Já tem uma conta?</p>
+                <p routerLink="/login" style="cursor: pointer; color: #552583; text-decoration: underline; font-weight: bold;">
+                    Faça login aqui
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

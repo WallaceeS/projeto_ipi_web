@@ -1,0 +1,28 @@
+.login-background {
+  background-color: #f4f4f4;
+  background-image: radial-gradient(#FDB927 0.5px, transparent 0.5px), radial-gradient(#552583 0.5px, #f4f4f4 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0,10px 10px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-background .container {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  /* Apagamos o flex-direction: column-reverse daqui! */
+  .col-md-6 {
+    border-right: none !important;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 2rem !important;
+  }
+  .col-md-6:last-child {
+    border-bottom: none;
+  }
+}
