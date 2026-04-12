@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 768px) {
-  /* Apagamos o flex-direction: column-reverse daqui! */
+  
   .col-md-6 {
     border-right: none !important;
     border-bottom: 1px solid #e0e0e0;
